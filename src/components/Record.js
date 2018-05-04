@@ -36,7 +36,7 @@ class Record extends Component {
   handleDelete(event){
     event.preventDefault()
     RecordsAPI.remove(this.props.record.id).then(
-      resp=>this.props.handleEditRecord(this.props.record)
+      resp=>this.props.handleDeleteRecord(this.props.record)
     ).catch(
       error=>console.log(error.message)
     )
